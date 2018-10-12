@@ -11,7 +11,9 @@
     "test": "npm run lint && npm run cover",
     "e2e": "mocha test/e2e.js -t 1800000",
     "codecov": "cat ./coverage/lcov.info | codecov",
-    "unify": "node scripts/unify"
+    "unify": "node scripts/unify",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": "Google Inc.",
   "contributors": [
@@ -45,26 +47,27 @@
     "@google-cloud/storage": "^0.1.1",
     "@google/cloud-debug": "^0.8.3",
     "@google/cloud-trace": "^0.5.5",
-    "async": "^2.0.1",
-    "body-parser": "^1.15.2",
+    "async": "^2.1.4",
+    "body-parser": "^1.18.2",
     "connect-memcached": "^0.2.0",
     "cookie-session": "^2.0.0-alpha.1",
-    "express": "^4.14.0",
-    "express-session": "^1.14.0",
-    "express-winston": "^2.0.0",
+    "express": "^4.16.0",
+    "express-session": "^1.15.6",
+    "express-winston": "^2.5.0",
     "gcloud": "~0.37.0",
     "jade": "^1.11.0",
     "kerberos": "^0.0.21",
-    "lodash": "^4.14.2",
-    "mongodb": "^2.2.5",
+    "lodash": "^4.17.5",
+    "mongodb": "^2.2.19",
     "multer": "^1.2.0",
-    "mysql": "^2.11.1",
+    "mysql": "^2.14.0",
     "nconf": "^0.8.4",
     "passport": "^0.3.2",
     "passport-google-oauth20": "^1.0.0",
     "prompt": "^1.0.0",
-    "request": "^2.74.0",
-    "winston": "^2.2.0"
+    "request": "^2.84.0",
+    "winston": "^2.2.0",
+    "snyk": "^1.103.4"
   },
   "devDependencies": {
     "codecov": "^1.0.1",
@@ -80,5 +83,6 @@
   },
   "engines": {
     "node": ">=0.12.7"
-  }
+  },
+  "snyk": true
 }
