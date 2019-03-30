@@ -9,7 +9,9 @@
     "monitor": "nodemon app.js",
     "deploy": "gcloud app deploy app.yaml",
     "test": "mocha test/index.js -t 30000",
-    "init-cloudsql": "node books/model-cloudsql.js"
+    "init-cloudsql": "node books/model-cloudsql.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "Google Inc.",
   "contributors": [
@@ -39,9 +41,9 @@
   },
   "dependencies": {
     "@google/cloud-debug": "^0.8.3",
-    "@google/cloud-trace": "^0.5.5",
-    "@google-cloud/datastore": "^0.1.1",
-    "@google-cloud/storage": "^0.1.1",
+    "@google/cloud-trace": "^0.6.0",
+    "@google-cloud/datastore": "^0.8.0",
+    "@google-cloud/storage": "^1.2.0",
     "body-parser": "^1.15.2",
     "connect-memcached": "^0.2.0",
     "express": "^4.14.0",
@@ -57,7 +59,8 @@
     "passport": "^0.3.2",
     "passport-google-oauth20": "^1.0.0",
     "prompt": "^1.0.0",
-    "winston": "^2.2.0"
+    "winston": "^2.2.0",
+    "snyk": "^1.143.5"
   },
   "devDependencies": {
     "mocha": "^3.0.2",
@@ -68,5 +71,6 @@
   },
   "engines": {
     "node": ">=4.3.2"
-  }
+  },
+  "snyk": true
 }
