@@ -11,7 +11,9 @@
     "test": "npm run lint && npm run cover",
     "e2e": "mocha test/e2e.js -t 1800000",
     "codecov": "cat ./coverage/lcov.info | codecov",
-    "unify": "node scripts/unify"
+    "unify": "node scripts/unify",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "author": "Google Inc.",
   "contributors": [
@@ -64,7 +66,8 @@
     "passport-google-oauth20": "^1.0.0",
     "prompt": "^1.0.0",
     "request": "^2.74.0",
-    "winston": "^2.2.0"
+    "winston": "^2.2.0",
+    "snyk": "^1.419.1"
   },
   "devDependencies": {
     "codecov": "^1.0.1",
@@ -80,5 +83,6 @@
   },
   "engines": {
     "node": ">=0.12.7"
-  }
+  },
+  "snyk": true
 }
