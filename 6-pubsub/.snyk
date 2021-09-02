@@ -1,0 +1,27 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.21.5
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:hoek:20180212':
+    - '@google/cloud-debug > google-auth-library > request > hawk > hoek':
+        patched: '2021-09-02T19:15:53.348Z'
+    - '@google/cloud-debug > google-auth-library > request > hawk > boom > hoek':
+        patched: '2021-09-02T19:15:53.348Z'
+    - '@google/cloud-debug > google-auth-library > request > hawk > sntp > hoek':
+        patched: '2021-09-02T19:15:53.348Z'
+    - '@google/cloud-debug > @google/cloud-diagnostics-common > google-auth-library-nodejs > request > hawk > hoek':
+        patched: '2021-09-02T19:15:53.348Z'
+    - '@google/cloud-debug > google-auth-library > request > hawk > cryptiles > boom > hoek':
+        patched: '2021-09-02T19:15:53.348Z'
+    - '@google/cloud-debug > @google/cloud-diagnostics-common > google-auth-library-nodejs > request > hawk > boom > hoek':
+        patched: '2021-09-02T19:15:53.348Z'
+    - '@google/cloud-debug > @google/cloud-diagnostics-common > google-auth-library-nodejs > request > hawk > sntp > hoek':
+        patched: '2021-09-02T19:15:53.348Z'
+    - '@google/cloud-debug > @google/cloud-diagnostics-common > google-auth-library-nodejs > request > hawk > cryptiles > boom > hoek':
+        patched: '2021-09-02T19:15:53.348Z'
+  'npm:tunnel-agent:20170305':
+    - '@google/cloud-debug > google-auth-library > request > tunnel-agent':
+        patched: '2021-09-02T19:15:53.348Z'
+    - '@google/cloud-debug > @google/cloud-diagnostics-common > google-auth-library-nodejs > request > tunnel-agent':
+        patched: '2021-09-02T19:15:53.348Z'
